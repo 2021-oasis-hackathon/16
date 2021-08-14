@@ -1,0 +1,176 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+
+nav a {
+  /* no underline */
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nabvar {
+  /* in a row */
+  display: flex;
+  justify-content: space-between;
+  /* Center Alignment */
+  align-items: center;
+  background-color: var(--background-color);
+  /* updown, side */
+  padding: 8px 12px;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.navbar__logo i {
+  color: var(--accent-color);
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  /* To increase click space */
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  /* rounded border */
+  border-radius: 4px;
+}
+
+.navbar__icons {
+  list-style: none;
+  color: var(--text-color);
+  display: flex;
+  padding-left: 0;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+.navbar__toogleBtn {
+  /* when the screen is big, it isn't showed */
+  display: none;
+  /* not included in flex of navbar; to deploy independently. */
+  position: absolute;
+  /* 32px away from the right. */
+  right: 32px;
+  font-size: 24px;
+  color: var(--accent-color);
+}
+
+.search-bar {
+  width: 500px;
+}
+
+main {
+  display: flex;
+}
+
+section ul {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid ul {
+  padding-left: 33px;
+}
+#grid #article {
+  padding-left: 25px;
+}
+
+body {
+  margin: 0;
+}
+
+.search-bar {
+  width: 500px;
+}
+
+main {
+  display: flex;
+}
+
+section ul {
+  border-right: 1px solid gray;
+  width: 100px;
+  margin: 0;
+  padding: 20px;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+#grid ul {
+  padding-left: 33px;
+}
+
+/* #grid ul li {
+  list-style: none;
+} */
+
+#grid #article {
+  padding-left: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .nabvar {
+    /* in a column */
+    flex-direction: column;
+    /* Left Alignment */
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    /* To show when you click toogleBtn */
+    display: none;
+    flex-direction: column;
+    /* Probably i don't need this code because I added it below*/
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    /* If you add this code, it will automatically align to the left. */
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons {
+    /* To show when you click toogleBtn */
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar__toogleBtn {
+    display: block;
+  }
+
+  /* when toggleBtn is clicked (=when active), show */
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}

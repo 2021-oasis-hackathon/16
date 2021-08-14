@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- icon homepage -->
+    <script src="https://kit.fontawesome.com/1be82683fe.js" crossorigin="anonymous"></script>
+    <!-- defer: To prevent html from not showing on your browser until all files download, -->
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="nabvar">
+        <div class="navbar__logo">
+            <!-- icon -->
+            <i class="fab fa-accusoft"></i>
+            <!-- go back to home screen("~~~") -->
+            <a href="">WebName</a>
+        </div>
+
+        <!-- ul - li -->
+        <ul class="navbar__menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">FAQ</a></li>
+        </ul>
+
+        <ul class="navbar__icons">
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-facebook-f"></i></li>
+        </ul>
+
+        <!-- #: when clicking it, no reponse about URL -->
+        <a href="#" class="navbar__toogleBtn"><i class="fas fa-bars"></i></a>
+    </nav>
+
+    <!-- search bar -->
+    <form action="https://www.google.com/search" method="GET">
+        <div class="mx-auto mt-5 search-bar input-group mb-3">
+            <input name="q" type="text" class="form-control rounded-pill" placeholder="검색" aria-label="Recipient's username" aria-describedby="button-addon2">
+        </div>
+    </form>
+    <main>
+        <section id="grid">
+            <ul>
+                <li> <a href="1.html">학교</a> </li>
+                <li> <a href="2.html">관심분야</a> </li>
+                <li> <a href="3.html">..</a> </li>
+                <li> <a href="3.html">..</a> </li>
+                <li> <a href="3.html">..</a> </li>
+                <li> <a href="3.html">..</a> </li>
+            </ul>
+        </section>
+        <section id="article">
+            <span>profile</span>
+        </section>
+    </main>
+    
+    
+    <a href="create.py">회원가입</a>
+
+    <!-- another page -->
+    <a href="create.py">회원가입</a>
+    <form action="process_create.py" method="post">
+        <p><input type="text" name="title" placeholder="학교"></p>
+        <p><textarea rows="4" name="description" placeholder="관심분야"></textarea></p>
+        <p><input type="submit"></p>
+    </form>
+
+    <br><br>
+
+    <!-- image upload -->
+    <div class="input-group">
+        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+      </div>
+    <!-- form select -->
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    
+    <br><br>
+
+    <!-- login -->
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    
+    <br><br>
+    
+    <!-- contact -->
+    <div class="form-floating">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">Comments</label>
+    </div>
+
+    <!-- pages -->
+    <nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+        </li>
+    </ul>
+    </nav>
+
+
+    
+</body>
+</html>
