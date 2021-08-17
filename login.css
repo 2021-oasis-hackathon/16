@@ -1,0 +1,30 @@
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__form > input {
+  margin-top: 16px;
+  width: 304px;
+  height: 43px;
+  font-size: 13px;
+}
+
+.login__form > input:nth-child(1),
+input:nth-child(2),
+input:nth-child(3) {
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(174, 226, 247);
+}
+
+.login__form > input:last-child {
+  background-color: #f5ebd0;
+  border-style: none;
+  color: purple;
+}
+
+.login__form > input:last-child:hover {
+  cursor: pointer;
+}

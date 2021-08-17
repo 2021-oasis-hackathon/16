@@ -1,176 +1,271 @@
 :root {
-  --text-color: #f0f4f5;
-  --background-color: #263343;
-  --accent-color: #d49466;
+  /* color */
+  --color-black: black;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-orange: #fcba03; /* hover */
+  --items-bgcolor: #f2bf5e;
+  --color-pink: #fd7f84;
+  --color-grey: rgb(80, 80, 80);
+  --color-light-grey: #dfdfdf;
+  --color-purple: #cfc7f2; /* concept */
+  --color-light-purple: #ffffff66;
+  --color-yellow: #fcd307;
+  --color-opaque: rgba(255, 255, 255, 0.5); /* last arg: opaque */
+
+  /* size */
+  --base-space: 8px;
+  --size-button: 60px;
+  --size-border: 4px;
+  --size-thumbnail: 50px;
+  --font-size: 18px;
+
+  /* annimation */
+  --animation-duration: 300ms;
 }
 
 body {
   margin: 0;
-  font-family: "Source Sans Pro";
+
+  /* background image fixed full screen */
+  background: url(img/desert.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* background-image: url(img/desert.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; default: scroll */
 }
 
-nav a {
-  /* no underline */
-  text-decoration: none;
-  color: var(--text-color);
-}
+.top {
+  background-color: var(--color-white);
+  /* there is always to the top.  */
+  position: sticky;
+  top: 0;
 
-.nabvar {
-  /* in a row */
   display: flex;
-  justify-content: space-between;
-  /* Center Alignment */
   align-items: center;
-  background-color: var(--background-color);
-  /* updown, side */
-  padding: 8px 12px;
+  height: 100px;
 }
 
-.navbar__logo {
-  font-size: 24px;
-  color: var(--text-color);
-}
+.header {
+  /* center horizontally */
+  margin: auto;
+  width: 60%;
 
-.navbar__logo i {
-  color: var(--accent-color);
-}
-
-.navbar__menu {
   display: flex;
-  list-style: none;
-  padding-left: 0;
+  align-items: center;
 }
 
-.navbar__menu li {
-  /* To increase click space */
-  padding: 8px 12px;
-}
-
-.navbar__menu li:hover {
-  background-color: var(--accent-color);
-  /* rounded border */
-  border-radius: 4px;
-}
-
-.navbar__icons {
-  list-style: none;
-  color: var(--text-color);
-  display: flex;
-  padding-left: 0;
-}
-
-.navbar__icons li {
-  padding: 8px 12px;
-}
-
-.navbar__toogleBtn {
-  /* when the screen is big, it isn't showed */
-  display: none;
-  /* not included in flex of navbar; to deploy independently. */
-  position: absolute;
-  /* 32px away from the right. */
-  right: 32px;
-  font-size: 24px;
-  color: var(--accent-color);
-}
-
-.search-bar {
-  width: 500px;
-}
-
-main {
+.logo {
+  color: var(--color-black);
+  margin-right: 150px;
   display: flex;
 }
 
-section ul {
-  border-right: 1px solid gray;
+.logo-word {
+  font-size: 29px;
+  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+    rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px,
+    rgba(0, 0, 0, 0.498039) 0px 5px 10px;
+}
+
+.logo span:nth-child(1) {
+  /* = firth-child */
+  font-weight: 700;
+}
+
+.logo span:nth-child(2) {
+  font-style: italic;
+}
+
+.nav-link {
+  color: var(--color-black);
+}
+
+.nav-link:hover {
+  color: var(--color-orange);
+  transition: all, var(--animation-duration);
+}
+
+form div {
+  margin-top: 20px;
+}
+
+form .search-bar {
+  width: 250px;
+}
+
+form div input:focus {
+  outline-style: none;
+}
+
+#login-form {
+  margin-right: 50px;
+}
+
+#login-form input {
   width: 100px;
-  margin: 0;
-  padding: 20px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-grey);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
 }
-#grid {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-}
-#grid ul {
-  padding-left: 33px;
-}
-#grid #article {
-  padding-left: 25px;
-}
-
-body {
-  margin: 0;
+#login-form input:hover {
+  color: var(--color-orange);
+  transition: all, var(--animation-duration);
 }
 
-.search-bar {
-  width: 500px;
-}
-
-main {
-  display: flex;
-}
-
-section ul {
-  border-right: 1px solid gray;
-  width: 100px;
-  margin: 0;
-  padding: 20px;
-}
-#grid {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-}
-#grid ul {
-  padding-left: 33px;
-}
-
-/* #grid ul li {
-  list-style: none;
+/* main img {
+  width: 1519px;
+  height: 514px;
+  object-fit: cover;
+  object-position: 50% 50%;
 } */
-
-#grid #article {
-  padding-left: 25px;
+main .beautiful {
+  background-image: url(img/beautiful.jpg);
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media screen and (max-width: 768px) {
-  .nabvar {
-    /* in a column */
-    flex-direction: column;
-    /* Left Alignment */
-    align-items: flex-start;
-    padding: 8px 24px;
-  }
+main .beautiful h4 {
+  font-size: 60px;
+  padding-top: 102px;
+  padding-left: 459.5px;
+}
 
-  .navbar__menu {
-    /* To show when you click toogleBtn */
-    display: none;
-    flex-direction: column;
-    /* Probably i don't need this code because I added it below*/
-    align-items: center;
-    width: 100%;
-  }
+main .beautiful h4 span {
+  font-family: geotica-w01-four-open, geotica-w05-four-open, fantasy;
+  color: var(--color-white);
+}
 
-  .navbar__menu li {
-    /* If you add this code, it will automatically align to the left. */
-    width: 100%;
-    text-align: center;
-  }
+main .beautiful h4 span span:nth-child(1) {
+  font-style: italic;
+}
 
-  .navbar__icons {
-    /* To show when you click toogleBtn */
-    display: none;
-    justify-content: center;
-    width: 100%;
-  }
+main .beautiful h4 span span:nth-child(2) {
+  letter-spacing: 0em;
+}
 
-  .navbar__toogleBtn {
-    display: block;
-  }
+main .beautiful h5 {
+  padding-top: 130px;
+  padding-left: 459.5px;
+  font-size: 29px;
+  color: var(--color-white);
+}
 
-  /* when toggleBtn is clicked (=when active), show */
-  .navbar__menu.active,
-  .navbar__icons.active {
-    display: flex;
-  }
+main .purple {
+  background-color: var(--color-purple);
+  height: 631px;
+  margin-bottom: 13px;
+}
+
+main .purple > h1 {
+  font-size: 56px;
+  text-align: center;
+  padding-top: 74px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+  font-family: didot-w01-italic, didot-w05-italic, serif;
+  letter-spacing: 0.1em;
+  color: var(--color-white);
+}
+.purple > div {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  /* font-family: fbgreen, sans-serif; */
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.order__box {
+  background-color: var(--color-light-purple);
+  margin-left: 13px;
+  width: 237px;
+  height: 296.78px;
+  text-align: center;
+}
+
+.order__number {
+  padding-top: 37px;
+  padding-bottom: 1px;
+  font-size: 100px;
+  letter-spacing: 0.05em;
+}
+
+.order__dash {
+  width: 43.99px;
+  height: 4.99px;
+  border-top: 1px solid white;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.order__content {
+  font-size: 16px;
+}
+
+.items {
+  display: grid;
+  grid: ". . . .";
+  list-style: none;
+  row-gap: 5px;
+  column-gap: 5px;
+  /* border: 16px solid silver; */
+  justify-content: center;
+}
+
+.item {
+  background: var(--items-bgcolor);
+  width: 241px;
+  height: 253.4px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.item__nickname {
+  font-size: 26px;
+}
+
+.item__description {
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.yellow {
+  height: 351px;
+  background-color: var(--color-yellow);
+  justify-content: center;
+  display: flex;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin: auto 40px;
+}
+
+.btn > span {
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  margin-top: 35px;
+}
+.iconBtn {
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
 }

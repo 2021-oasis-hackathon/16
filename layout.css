@@ -1,0 +1,47 @@
+.title {
+  background-color: white;
+  margin-top: 40px;
+  margin-right: 60px;
+  margin-left: 60px;
+  padding-top: 50px;
+  height: 255px;
+  text-align: center;
+}
+
+.title > span {
+  font-size: 56px;
+  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+    rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px,
+    rgba(0, 0, 0, 0.498039) 0px 5px 10px;
+  font-weight: 600;
+}
+
+.title > span > span:first-child {
+  font-size: 20px;
+}
+
+.title > span > span:last-child {
+  font-style: italic;
+}
+
+.word {
+  height: 246.56px;
+  text-align: center;
+  padding-top: 110px;
+}
+
+.word > p {
+  font-size: 16px;
+  line-height: 0.9em;
+  font-weight: 400;
+  font-size: 26px;
+  /* font-family: fbgreen, sans-serif; */
+}
+
+.word > p:last-child {
+  font-size: 15px;
+}
+
+.free__writing {
+  background-color: rgba(255, 255, 255, 0.5);
+}
