@@ -1,28 +1,22 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
-//var fs = require('fs');
+var fs = require('fs');
 var sanitizeHtml = require('sanitize-html');
-var template = require('../lib/template.js');
-var db = require('../lib/db');
- 
+var template = require(__dirname + '/../template.js');
+//var db = require(__dirname + '/../db');
+
+module.exports = router;
 router.get('/create', function(request, response){
-    db.query(`SELECT * FROM topic`, function(error,topics){
-        var title = 'Welcome';
-        var description = 'Hello!!!!!!!!!!!';
-        var list = template.list(topics);
+   // db.query(`SELECT * FROM user`, function(error,users){
+        var title = 'WEB - create';
+        var list = template.list(request.list);
         var html = template.HTML(title, list,
-          `<h2>${title}</h2>${description}`,
-          `<a href="/create">create</a>`
-        );
-        //response.writeHead(200);
-        //response.end(html);
-      });
-    //var title = 'WEB - create';
-    //var list = template.list(request.list);
-    //var html = template.HTML(title, list, 
-   /* `
-      <form action="/topic/create_process" method="post">
+    //       `<h2>${title}</h2>${description}`,
+    //       `<a href="/create">create</a>`
+    //     );
+    `
+      <form action="/user/create_process" method="post">
         <p><input type="text" name="title" placeholder="title"></p>
         <p>
           <textarea name="description" placeholder="description"></textarea>
@@ -31,7 +25,9 @@ router.get('/create', function(request, response){
           <input type="submit">
         </p>
       </form>
-    `, '');*/
+    `, '');
+    // response.writeHead(200);
+    // response.end(html);
     response.send(html);
   });
    
@@ -40,7 +36,7 @@ router.get('/create', function(request, response){
     var title = post.title;
     var description = post.description;
     fs.writeFile(`data/${title}`, description, 'utf8', function(err){
-      response.redirect(`/topic/${title}`);
+      response.redirect(`/user/${title}`);
     });
   });
    
@@ -51,7 +47,7 @@ router.get('/create', function(request, response){
       var list = template.list(request.list);
       var html = template.HTML(title, list,
         `
-        <form action="/topic/update_process" method="post">
+        <form action="/user/update_process" method="post">
           <input type="hidden" name="id" value="${title}">
           <p><input type="text" name="title" placeholder="title" value="${title}"></p>
           <p>
@@ -62,7 +58,7 @@ router.get('/create', function(request, response){
           </p>
         </form>
         `,
-        `<a href="/topic/create">create</a> <a href="/topic/update/${title}">update</a>`
+        `<a href="/user/create">create</a> <a href="/user/update/${title}">update</a>`
       );
       response.send(html);
     });
@@ -75,7 +71,7 @@ router.get('/create', function(request, response){
     var description = post.description;
     fs.rename(`data/${id}`, `data/${title}`, function(error){
       fs.writeFile(`data/${title}`, description, 'utf8', function(err){
-        response.redirect(`/topic/${title}`);
+        response.redirect(`/user/${title}`);
       })
     });
   });
@@ -103,9 +99,9 @@ router.get('/create', function(request, response){
         var list = template.list(request.list);
         var html = template.HTML(sanitizedTitle, list,
           `<h2>${sanitizedTitle}</h2>${sanitizedDescription}`,
-          ` <a href="/topic/create">create</a>
-            <a href="/topic/update/${sanitizedTitle}">update</a>
-            <form action="/topic/delete_process" method="post">
+          ` <a href="/user/create">create</a>
+            <a href="/user/update/${sanitizedTitle}">update</a>
+            <form action="/user/delete_process" method="post">
               <input type="hidden" name="id" value="${sanitizedTitle}">
               <input type="submit" value="delete">
             </form>`
@@ -113,5 +109,4 @@ router.get('/create', function(request, response){
         response.send(html);
       }
     });
-  });
-  module.exports = router;
+});
