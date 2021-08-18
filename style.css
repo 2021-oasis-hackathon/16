@@ -39,86 +39,28 @@ body {
   background-attachment: fixed; default: scroll */
 }
 
-.top {
-  background-color: var(--color-white);
-  /* there is always to the top.  */
-  position: sticky;
-  top: 0;
-
-  display: flex;
-  align-items: center;
-  height: 100px;
-}
-
-.header {
-  /* center horizontally */
-  margin: auto;
-  width: 60%;
-
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  color: var(--color-black);
-  margin-right: 150px;
-  display: flex;
-}
-
-.logo-word {
-  font-size: 29px;
-  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
-    rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px,
-    rgba(0, 0, 0, 0.498039) 0px 5px 10px;
-}
-
-.logo span:nth-child(1) {
-  /* = firth-child */
-  font-weight: 700;
-}
-
-.logo span:nth-child(2) {
-  font-style: italic;
-}
-
-.nav-link {
-  color: var(--color-black);
-}
-
-.nav-link:hover {
-  color: var(--color-orange);
-  transition: all, var(--animation-duration);
-}
-
-form div {
-  margin-top: 20px;
-}
-
-form .search-bar {
-  width: 250px;
-}
-
-form div input:focus {
-  outline-style: none;
-}
-
 #login-form {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 38px;
   margin-right: 50px;
-}
-
-#login-form input {
-  width: 100px;
-  height: 40px;
   border: none;
   background-color: transparent;
   color: var(--color-grey);
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
 }
-#login-form input:hover {
+
+#login-form:hover {
+  cursor: pointer;
   color: var(--color-orange);
   transition: all, var(--animation-duration);
+}
+
+#login-form:focus {
+  outline-style: none;
 }
 
 /* main img {

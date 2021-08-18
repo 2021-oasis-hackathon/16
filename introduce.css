@@ -1,47 +1,52 @@
-body {
-  background-color: #cfc7f2;
-}
-main > form {
+main > .writing {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  padding-top: 30px;
   margin-bottom: 240px; /* check 반응형으로*/
 }
 
-main > form > input,
-main > form > textarea {
-  width: 304px;
+main > .writing > input,
+main > .writing > textarea,
+main > .writing > div > .loginJoin {
+  width: 480px;
   font-size: 13px;
   border-style: none;
   border-radius: 3px;
   font-size: 11.5px;
   margin-top: 16px;
-}
-
-main > form > input {
-  height: 43px;
-}
-
-main > form > input::placeholder,
-textarea::placeholder {
   padding-left: 15px;
 }
 
-/* same  */
-/* main > form > input::placeholder,
+main > .writing > input,
+main > .writing > div > .loginJoin {
+  height: 43px;
+}
+
+main > .introduce__form > input {
+  width: 304px;
+}
+
+/* main > .writing > input::placeholder,
 textarea::placeholder {
-  padding-left: 10px;
+  padding-left: 15px;
 } */
 
-main > form > textarea::placeholder {
+main > .writing > textarea::placeholder {
   padding-top: 11px;
 }
 
 /* submit btn */
-main > form > input:last-child {
+main > .writing > input:last-child,
+main > .introduce__form > div > .loginJoin {
   background-color: #f5ebd0;
 }
-main > form > input:last-child:hover {
+
+main > .introduce__form > div > .loginJoin {
+  width: 152px;
+}
+
+main > .writing > input:last-child:hover,
+main > .introduce__form > div > .loginJoin:hover {
   cursor: pointer;
 }

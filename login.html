@@ -24,12 +24,16 @@
 <body>
     <div class="top"><header></header></div>
     <main class="beautiful">
-        <form action="introduce.html" class="login__form writing introduce__form">
-            <input required minlength="5" type="text" placeholder="아이디 입력">
-            <input required minlength="5" type="text" placeholder="비밀번호 입력">
-            <input required minlength="5" type="text" placeholder="비밀번호 확인">
-            <input type="submit" value="가입하기">
+        <form action="index.html" class="login__form writing introduce__form">
+            <input required type="text" placeholder="아이디 입력">
+            <input required type="password" placeholder="비밀번호 입력">
+            <div>
+                <input class = "loginJoin" type="submit" value="로그인">
+                <button class = "loginJoin" onclick="location.href='join.html'">회원가입</button>
+            </div>
+    
         </form>
+        
     </main>
     <footer></footer>
 </body>

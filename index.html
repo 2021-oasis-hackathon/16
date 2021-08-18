@@ -13,45 +13,14 @@
     <!-- <link rel="stylesheet" href="profile.css"> -->
     <title>oasis mole</title>
     <script src="src/main.js" defer></script>
+    <script src="src/headerFooter.js" defer></script>
 </head>
 <body>
-    <div class="top">
-        <header class = "header">
-            <div class = "logo">
-                <span class = "logo-word">oasis</span>
-                &nbsp;
-                <span class = "logo-word">mole</span>
-            </div>
-            <nav class="nabvar">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">메인</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">공모전</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">동아리</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="study.html">스터디</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="community.html">커뮤니티</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- search bar -->
-            <form class ="searcg-bar" action="">
-                <div class="mx-auto search-bar input-group mb-3">
-                    <input required name="q" type="text" class="form-control rounded-pill" placeholder="검색" aria-label="Recipient's username" aria-describedby="button-addon2">
-                </div>
-            </form>
-        </header>
-        <form action="join.html" id="login-form">
-            <input type="submit" value="Log In">
-        </form>
-    </div>
+    <div class="top"><header></header></div>
+    <button id="login-form" onclick="location.href='login.html'">Log In</button>
+    <!-- <form action="login.html" id="login-form">
+        <input type="submit" value="Log In">
+    </form> -->
     <main>
         <!-- <img src="img/beautiful.jpg" alt=""> -->
         <div class="beautiful">
@@ -108,7 +77,7 @@
                 class="iconBtn"
                 src="img/pencil.png"
                 alt="스터디"
-                onclick="javascript:location.href='#'"
+                onclick="javascript:location.href='study.html'"
                 />
                 <span>스터디</span>
             </div>
@@ -126,7 +95,7 @@
                 class="iconBtn"
                 src="img/bulb.png"
                 alt="공모전"
-                onclick="javascript:location.href='#'"
+                onclick="javascript:location.href='contest.html'"
                 />
                 <span>공모전</span>
             </div>
@@ -135,18 +104,13 @@
                 class="iconBtn"
                 src="img/drawer.png"
                 alt="사용자"
-                onclick="javascript:location.href='#'"
+                onclick="javascript:location.href='community.html'"
                 />
-                <span>사용자</span>
+                <span>커뮤니티</span>
             </div>
         </div>
     </main>
-    <footer>
-        <div>
-            <div><span>oasis</span>&nbsp;<span>mole</span> </div>
-            <span>당신이 원하는 이를 oasis mole에서 함께 찾아요</span>
-        </div>
-    </footer>
+    <footer></footer>
     
 
 

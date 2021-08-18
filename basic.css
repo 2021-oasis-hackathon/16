@@ -23,6 +23,10 @@
   --animation-duration: 300ms;
 }
 
+body {
+  background-color: #cfc7f2;
+}
+
 .top {
   background-color: var(--color-white);
   /* there is always to the top.  */
@@ -88,10 +92,15 @@ header form {
 }
 
 .search__bar > input {
+  width: 264px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--color-purple);
   font-size: 1rem;
-  width: 250px;
+  /* width: 250px; */
   /* background-color: rgba(255, 255, 255, 0.2); */
   font-weight: 500;
+  padding-left: 15px;
 }
 
 footer {

@@ -10,13 +10,10 @@ const containerFooter = document.querySelector("footer");
 </div>
 <ul class="nav">
   <li class="nav-item">
-      <a class="nav-link active" href="#">메인</a>
+      <a class="nav-link" href="contest.html">공모전</a>
   </li>
   <li class="nav-item">
-      <a class="nav-link" href="#">공모전</a>
-  </li>
-  <li class="nav-item">
-      <a class="nav-link" href="#">동아리</a>
+      <a class="nav-link" href="club.html">동아리</a>
   </li>
   <li class="nav-item">
       <a class="nav-link" href="study.html">스터디</a>

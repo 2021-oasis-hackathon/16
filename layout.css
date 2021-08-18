@@ -1,3 +1,7 @@
+ul {
+  list-style: none;
+}
+
 .title {
   background-color: white;
   margin-top: 40px;
@@ -44,4 +48,58 @@
 
 .free__writing {
   background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-bottom: 300px;
+  padding: 110px 110px;
+  /* text-align: center; */
+}
+.club__contest {
+  margin-top: 84px;
+}
+
+.writing__form {
+  /* width: 500px; */
+  /* display: inline-block; */
+  /* text-align: initial; */
+
+  display: flex;
+}
+.label {
+  /* width: 400px; */
+  flex: 1 38%;
+  text-align: center;
+}
+.content {
+  flex: 1 62%;
+}
+.label > h1 {
+  font-size: 56px;
+  margin-bottom: 31px;
+}
+
+.label > h6 {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.label > button {
+  width: 150px;
+  height: 40px;
+  transition: all 0.2s ease, visibility 0s;
+  background: #000000;
+  border-radius: 10px;
+  color: white;
+}
+
+.label > button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.content > ul > li > h6 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: white;
 }
