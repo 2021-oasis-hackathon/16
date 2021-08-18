@@ -1,7 +1,7 @@
 var http = require('http');
 var url = require('url');
-var topic = require(__dirname + '\lib\topic.js');
-var author = require(__dirname +'\lib\author.js');
+var topic = require(__dirname + '/lib/topic.js'
+var author = require(__dirname +'/lib/author.js');
  
 var app = http.createServer(function(request,response){
     var _url = request.url;
