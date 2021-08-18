@@ -23,8 +23,23 @@
   --animation-duration: 300ms;
 }
 
-body {
+/*body {
   background-color: #cfc7f2;
+} */
+
+body {
+  margin: 0;
+
+  /* background image fixed full screen */
+  background: url(img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* background-image: url(img/desert.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; default: scroll */
 }
 
 .top {
@@ -37,7 +52,7 @@ body {
 header {
   /* center horizontally */
   margin: auto;
-  width: 60%;
+  width: 40%;
   height: 100px;
   display: flex;
   align-items: center;
@@ -52,38 +67,22 @@ header form {
 }
 
 .logo {
-  color: var(--color-black);
   margin-right: 150px;
-  display: flex;
+  width: 50px;
+  max-width: 100px;
 }
 
-.logo > a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.logo > a > span {
-  font-size: 29px;
-  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
-    rgba(140, 140, 140, 0.498039) 0px 4px 0px, #787878 0px 0px 0px,
-    rgba(0, 0, 0, 0.498039) 0px 5px 10px;
-}
-
-.logo > a > span:nth-child(1) {
-  /* = firth-child */
-  font-weight: 700;
-}
-
-.logo > a > span:nth-child(2) {
-  font-style: italic;
+.logo:hover {
+  cursor: pointer;
 }
 
 .nav {
-  display: flex;
+  /* display: flex; */
 }
 
 .nav-link {
   color: var(--color-black);
+  font-weight: bold;
 }
 
 .nav-link:hover {
@@ -101,6 +100,30 @@ header form {
   /* background-color: rgba(255, 255, 255, 0.2); */
   font-weight: 500;
   padding-left: 15px;
+}
+
+#login-form {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 38px;
+  margin-right: 50px;
+  border: none;
+  background-color: transparent;
+  color: var(--color-grey);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#login-form:hover {
+  cursor: pointer;
+  color: var(--color-orange);
+  transition: all, var(--animation-duration);
+}
+
+#login-form:focus {
+  outline-style: none;
 }
 
 footer {
@@ -124,16 +147,12 @@ footer > div > div {
     rgb(0 0 0 / 50%) 0px 5px 10px;
 }
 
-footer > div > div > span:nth-child(1) {
+footer > div > div > span {
   font-weight: 900;
 }
 
-footer > div > div > span:nth-child(2) {
-  font-weight: 400;
-  font-style: italic;
-}
-
-footer > span {
-  font-size: 19.5px;
+footer > div > span {
+  font-weight: 600;
+  font-size: 18px;
   /* font-family: fbgreen, sans-serif; */
 }

@@ -2,8 +2,9 @@ ul {
   list-style: none;
 }
 
+/* title class : club and context pages among rest pages */
 .title {
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0.4);
   margin-top: 40px;
   margin-right: 60px;
   margin-left: 60px;
@@ -24,10 +25,6 @@ ul {
   font-size: 20px;
 }
 
-.title > span > span:last-child {
-  font-style: italic;
-}
-
 .word {
   height: 246.56px;
   text-align: center;
@@ -40,6 +37,7 @@ ul {
   font-weight: 400;
   font-size: 26px;
   /* font-family: fbgreen, sans-serif; */
+  font-weight: bold;
 }
 
 .word > p:last-child {
@@ -50,7 +48,6 @@ ul {
   background-color: rgba(255, 255, 255, 0.5);
   margin-right: 60px;
   margin-left: 60px;
-  margin-bottom: 300px;
   padding: 110px 110px;
   /* text-align: center; */
 }
@@ -98,8 +95,33 @@ ul {
   color: black;
 }
 
+.content > ul > li {
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
 .content > ul > li > h6 {
+  font-weight: bold;
   font-size: 20px;
   margin-bottom: 24px;
-  color: white;
+}
+
+#quote {
+  background-color: rgb(255, 255, 255, 0.4);
+  margin-top: 40px;
+  margin-bottom: 500px;
+  margin-right: 60px;
+  margin-left: 60px;
+  padding-top: 100px;
+  height: 255px;
+  text-align: center;
+}
+
+#quote > span {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+#quote > span:last-child {
+  font-size: 14px;
 }

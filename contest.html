@@ -10,11 +10,12 @@
     <!-- css is more important that bootstrap -->
     <link rel="stylesheet" href="basic.css">
     <link rel="stylesheet" href="layout.css">
-    <script src="src/search.js" defer></script>
     <script src="src/headerFooter.js" defer></script>
+    <script src="src/quotes.js" defer></script>
+    <script src="src/contest.js" defer></script>
 </head>
 <body>
-    <div class="top"><header></header></div>
+    <div class="top"></div>
     <main>
         <section class="free__writing club__contest">
             <div class="writing__form">
@@ -24,22 +25,12 @@
                     <button onclick="location.href='writing.html'">글쓰기</button>
                 </div>
                 <div class = "content">
-                    <ul>
-                        <li>
-                            <h6>오아기스 해커톤</h6>
-                            <p>호남지역 대학생 네트워크 제 2회 오아시스 해커톤 대회</p>
-                        </li>
-                        <li>
-                            <h6>이노베이션</h6>
-                            <p>언택트 시대를 주도하는 MZ세대를 위한 힙한 서비스를 주제로 한 온라인 해커톤 대회</p>
-                        </li>
-                    </ul>
+                    <ul class="items"></ul>
                 </div>
             </div>
-            
         </section>
         <div id="quote">
-            <span></span>
+            <span></span><br>
             <span></span>
         </div>
     </main>
